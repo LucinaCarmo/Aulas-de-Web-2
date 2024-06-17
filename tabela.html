@@ -1,18 +1,75 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tabela</title>
+    <style>
+        h1{
+            color:aqua;
+            text-align: center;
+        }
+        table{
+            border: 1px green groove;
+        }
+    </style>
 </head>
+
 <body>
     <h1>Tabela de siglas</h1>
-    <table border="2">
-        <td><!--linha-->
-            <tr>Siglas</tr><!--coluna-->
-            <tr></tr>
-        </td>
+    <table>
+        <tr><!--linha-->
+            <th>Siglas</th><!--coluna no cabeçalho-->
+            <th>Estados</th>
+            <th>Cidades</th>
+        </tr>
+        <tr>
+            <td>MG</td><!--conteúdo da tabela-->
+            <td>Minas Gerais</td>
+            <td>853</td>
+        </tr>
+        <tr>
+            <td>SP</td>
+            <td>São Paulo</td>
+        </tr>
+        <tr>
+            <td>RJ</td>
+            <td>Rio de Janeiro</td>
+        </tr>
+        <tr>
+            <td colspan="2">Total de cidades do país</td><!--colspan é mesclar linha-->
+            <td>5570</td>
+        </tr>
+    </table>
+    <h2>Tabelas com tags semânticas</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Sabores</th>
+                <th>Origem</th>
+                <th>Tipo de prato</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Macarronada</td>
+                <td>Italiana</td>
+                <td>Refeição</td>
+            </tr>
+            <tr>
+                <td>Mochi</td>
+                <td>Japonesa</td>
+                <td>Sobremesa</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3">Informações da minha cabeça</td>
+            </tr>
+        </tfoot>
     </table>
 </body>
+
 </html>
