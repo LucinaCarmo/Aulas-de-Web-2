@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="#" method="get" oninput="resultado.value=parseInt(numero1.value)+parseInt(numero2.value)">
+        <h1>Formulário de Personalidade e Saúde Mental</h1>
+
+        <h2>Suas Características Positivas</h2>
+
+        <legend>Marque as características que mais combinam com você:</legend><br>
+        <input type="checkbox" value="alegre" id="idcaracteristericas1" name="Caracteristicas">
+        <label for="idcaracteristericas1">Alegre</label><br>
+
+        <input type="checkbox" value="amigavel" id="idcaracteristericas2" name="Caracteristicas">
+        <label for="idcaracteristericas2">Amigável</label><br>
+
+        <input type="checkbox" value="criativo" id="idcaracteristericas3" name="Caracteristicas">
+        <label for="idcaracteristericas3">Criativo</label><br>
+
+        <input type="checkbox" value="curioso" id="idcaracteristericas4" name="Caracteristica">
+        <label for="idcaracteristericas4">Curioso</label><br>
+
+        <input type="checkbox" value="empatico" id="idcaracteristericas5" name="Caracteristica">
+        <label for="idcaracteristericas5">Empático</label><br>
+
+        <input type="checkbox" value="generoso" id="idcaracteristericas6" name="Caracteristica">
+        <label for="idcaracteristericas6">Generoso</label><br>
+
+        <input type="checkbox" value="inteligente" id="idcaracteristericas7" name="Caracteristica">
+        <label for="idcaracteristericas7">Inteligente</label><br>
+
+        <input type="checkbox" value="organizado" id="idcaracteristericas8" name="Caracteristica">
+        <label for="idcaracteristericas8">Organizado</label><br><!--id e for tem que ter o mesmo nome-->
+
+        <h2>Saúde mental</h2>
+
+        <label for="saudemental">Selecione o que melhor se identifica:</label>
+        <select id="saudemental" name="saudemental">
+            <optgroup label="psicologo">
+                <option value="nuncafui">Nunca fui</option>
+                <option value="jafui">Já fui</option>
+                <option value="estouindo">Estou indo</option>
+            </optgroup>
+            <optgroup label="outro profissional">
+                <option value="outropsiquiatra">Outro Psiquiatra</option>
+                <option value="nuncaprecisei">Nunca precisei</option>
+            </optgroup>
+        </select>
+        <br>
+        <fieldset>
+            <legend>Conslusão</legend>
+            <p>Faça a soma e conclua o cadastro:
+            <p>
+
+                <label for="numero1">Número 1:</label>
+                <input type="number" id="numero1" name="numero1" maxlength="50" size="20" required><br>
+
+                <label for="numero2">Número 2:</label>
+                <input type="number" id="numero2" name="numero2" maxlength="50" size="20" required><br>
+                <label for="resultado">Resultado daa soma</label>
+                <output name="resultado" id="resultado">0</output>
+
+        </fieldset><br>
+
+        <button onclick="verificarCaracteristicas()">Enviar</button>
+        <input type="reset" value="Limpar">
+        <br>
+        <a href="#">Início</a>
+        <script>
+            function verificarCaracteristicas() {
+                const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+                let selectCount = 0;
+
+                for (const checkbox of checkboxes) {
+                    if (checkbox.checked) {
+                        selectCount++;
+                    }
+                }
+                if (selectCount < 1) {
+                    alert('Selecione pelo menos 1 característica!');
+                } else if (selectCount > 3) {
+                    alert('Selecione no máximo 3 característica!');
+                } else {
+                    alert('Você selecionou ' + selectCount + 'características.\n Suas informações foram salvas! Boa sorte!');
+                }
+
+            }
+        </script>
+
+    </form>
+
+
+
+
+
+
+
+</body>
+
+</html>

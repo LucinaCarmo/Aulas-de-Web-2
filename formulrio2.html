@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário 2</title>
+</head>
+
+<body>
+    <form action="#" method="post">
+        <h1>Justifique sua Entrada na Lista de Espera</h1>
+       
+            <h2>Dados Pessoais</h2>
+        
+        <label for="genero">Gênero</label><br>
+        <input type="radio" name="genero" value="Masculino"> Masculino<br>
+        <input type="radio" name="genero" value="Feminino"> Feminino<br>
+        <input type="radio" name="genero" value="Outro"> Outro<br>
+
+       
+            <h2>Necessidade</h2>
+        
+        <label for="Necessidade">Qual o grau de sua necessidade?</label><br>
+        <input type="radio" name="Necessidade" value="muito">Necessito muito<br>
+        <input type="radio" name="Necessidade" value="pouco">Necessito pouco<br>
+        <input type="radio" name="Necessidade" value="Necessito">Necessito<br>
+
+        
+            <h2>Justifique sua Necessidade</h2>
+        
+        <label for="Justifique">Justifique sua escolha:</label><br>
+        <textarea id="Justifique" name="Justifique" rows="5" cols="33" placeholder="Escreva sua justificativa aqui"></textarea>
+
+            <h2>Escolaridade</h2>
+
+        <label for="Escolaridade">Sua escolaridade:</label>
+        <input type="text" id="Escolaridade" name="CPescolaridade" list="listaescolaridade" required><br>
+        <datalist id="listaescolaridade">
+            <option value="Ensino fundamental Incompleto"></option>
+                <option value="Ensino fundamental Completo"></option>
+                <option value="Ensino Medio Incompleto"></option>
+                <option value="Ensino Medio Completo"></option>
+                <option value="Ensino Superior Incompleto"></option>
+                <option value="Ensino Superior Completo"></option>
+                <option value="Pós-Graduação"></option>
+                <option value="Mestrado"></option>
+                <option value="Doutorado"></option>
+        </datalist>
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Limpar">
+        <br>
+        <a href="#">Próxima página</a>
+
+
+
+    </form>
+
+</body>
+
+</html>
