@@ -1,0 +1,36 @@
+.paragrafo1{
+    background-color: black;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 15px;
+    line-height: 1.5; /*distancia entre linhas*/
+    margin: 5px;
+    text-indent: 1em; /*espaço na primeira linha do texto*/
+    text-align: justify;
+
+}
+cite{
+    background-color: rgb(190, 228, 224);
+    margin: 10px;
+}
+    .paragrafo2{
+        background-color: green;
+        color: blue;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-weight: bold;
+        font-size: 22px;
+        text-align: right;
+        line-height: 1.5;
+        margin: 5px;
+        padding: 10px; /*adiciona um pouco de espaço interno*/
+    }
+    .citacao{
+        background-color: rgb(190, 228, 224);
+        text-align: center;
+    }
+    #meuId{
+        margin-top: 25px;
+        border: 5px violet dotted;
+        padding: 15px;
+    }
+

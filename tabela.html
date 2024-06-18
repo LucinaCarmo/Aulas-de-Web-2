@@ -7,13 +7,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tabela</title>
     <style>
-        h1{
-            color:aqua;
+        h1 {
+            color: aqua;
             text-align: center;
         }
-        table{
-            border: 1px green groove;
+
+        table th {
+            border: 2px green groove;
+            background-color: aqua;
+            color: orange;
         }
+
+        table tr:nth-child(even) {
+            /*colorindo linhas em pares*/
+            border: 2px green groove;
+            background-color: blanchedalmond;
+            color: cornflowerblue
+        }
+
+        table tr:nth-child(odd) {
+            /*colorindo linhas impar*/
+            border: 2px green groove;
+            background-color: chocolate;
+            color: white;
+        }
+
+        table,table td, table th {
+            border: 2px green groove;
+        }
+
     </style>
 </head>
 
