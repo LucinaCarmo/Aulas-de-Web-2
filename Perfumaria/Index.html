@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/estiloIndex.css">
     <title>Perfumaria News</title>
 </head>
 
@@ -13,22 +14,24 @@
         <h1>Perfumaria News</h1>
         <nav>
             <ul>
-                <li><a href="Index.html">Home</a></li>
-                <ul>
-                    <li><a href="Noticias.html">Notícias</a></li>
-                    <li><a href="Resenha.html">Resenhas</a></li>
-                </ul>
-            </ul>
-            <ul>
+                <li class="dropdown"><a href="Index.html">Home</a>
+                    <ul class="dropdown-child">
+                        <li><a href="Noticias.html">Notícias</a></li>
+                        <li><a href="Resenha.html">Resenhas</a></li>
+                    </ul>
+
+                </li>
+
                 <li><a href="Galeria.html">Galeria</a></li>
-                <li><a href="#">Categoria</a></li>
-                <ul>
-                    <li><a href="#">Perfumes Feminino</a></li>
-                    <li><a href="#">Perfumes Masculinos</a></li>
-                    <li><a href="#">Perfumes Unissex</a></li>
-                    <li><a href="#">Niche Perfumes</a></li>
-                    <li><a href="#">Marcas</a></li>
-                </ul>
+                <li class="dropdown"><a href="#">Categoria</a>
+                    <ul class="dropdown-child">
+                        <li><a href="#">Perfumes Feminino</a></li>
+                        <li><a href="#">Perfumes Masculinos</a></li>
+                        <li><a href="#">Perfumes Unissex</a></li>
+                        <li><a href="#">Niche Perfumes</a></li>
+                        <li><a href="#">Marcas</a></li>
+                    </ul>
+                </li>
                 <li><a href="Contato.html">Contato</a></li>
             </ul>
 
