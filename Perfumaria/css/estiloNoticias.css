@@ -1,0 +1,34 @@
+header {
+    background-color: rgb(41, 41, 169);
+}
+h1, h2 {
+text-align: center;
+color: aliceblue;
+}
+main {
+    background:linear-gradient(blue, aliceblue);
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box;
+}
+section article{
+    background-color: aliceblue;
+}
+article h2 {
+    color: black;
+}
+section {
+   text-align: justify;
+   margin: 20px 10px 20px 10px;
+ 
+}
+
+.img {
+    width: 550px;
+    align-items: baseline;
+    border-radius: 20px;
+    border: 10px solid blue;
+    object-fit: cover;
+    object-position: center;
+}
+
