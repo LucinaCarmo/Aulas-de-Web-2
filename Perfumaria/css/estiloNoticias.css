@@ -1,7 +1,7 @@
 header {
     background-color: rgb(41, 41, 169);
 }
-h1, h2 {
+h1, h2{
 text-align: center;
 color: aliceblue;
 }
@@ -30,5 +30,10 @@ section {
     border: 10px solid blue;
     object-fit: cover;
     object-position: center;
+}
+p {
+text-align: center;
+justify-content: center;
+color: blueviolet;
 }
 
