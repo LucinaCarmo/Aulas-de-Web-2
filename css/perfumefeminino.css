@@ -1,3 +1,9 @@
+
+header nav ul li{
+    background-color: bisque;
+    position: relative;
+   display: inline-block; 
+}
 body { /*cor de fundo da tela */
     background-color: grey;
 }

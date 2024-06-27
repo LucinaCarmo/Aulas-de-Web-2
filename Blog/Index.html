@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/estilo.css">
+    <title>Blog</title>
+</head>
+
+<body>
+    <header>
+        <h1>Blog da Lu</h1>
+        <nav>
+            <div class="menu">
+                <a href="#introducao">Introdução</a>
+                <a href="#assunto-semana">Assunto da Semana</a>
+                <a href="#horoscopo">Horóscopo</a>
+                <a href="#que-sou-eu">Quem Sou Eu</a>
+                <a href="#contato">Contato</a>
+            </div>
+        </nav>
+    </header>
+    <main> <div id="introducao" class="section">
+        <h1>Introdução</h1>
+        <p>Bem-vindo ao meu blog! Aqui você encontrará uma variedade de conteúdos interessantes.</p>
+    </div>
+    <div id="assunto-semana" class="section">
+        <h1>Assunto da Semana</h1>
+        <p>Esta semana estamos discutindo sobre a vida pessoal do Neymar!</p>
+        <label for="dias-semana">Escolha um dia da semana:</label>
+        <select id="dias-semana" name="dias-semana" onchange="carregarIframe()">
+            <option value="">Selecione um dia</option>
+            <option value="segunda-feira.html">Segunda-feira</option>
+            <option value="terca-feira.html">Terça-feira</option>
+            <option value="quarta-feira.html">Quarta-feira</option>
+            <option value="quinta-feira.html">Quinta-feira</option>
+            <option value="sexta-feira.html">Sexta-feira</option>
+            <option value="sabado.html">Sábado</option>
+        </select>
+        <iframe id="iframe-assunto" src=""></iframe>
+    </div>
+    <div id="horoscopo" class="section">
+        <h1>Horóscopo</h1>
+        <p>Confira o seu horóscopo semanal...</p>
+    </div>
+
+    <div id="que-sou-eu" class="section">
+<h1>Quem sou eu</h1>
+<p>Saiba mais sobre mim...</p>
+    </div>
+
+    <div id="contato" class="section">
+<h1>Contato</h1>
+<p>Entre em contato comigo pelo whatsApp</p>
+    </div>
+    </main>
+    <script>
+        function carregarIframe() {
+            var select = document.getElementById("dias-semana");
+            var iframe = document.getElementById("iframe-assunto");
+            var dia = select.value;
+
+        if (dia) {
+            iframe.src = dia;
+            iframe.style.display = "block"; //mostrar o iframe
+        } else {
+            iframe.style.display = "none"; //oculta o iframe se nenhum dia estiver selecionado
+        }
+        
+        }
+    </script>
+</body>
+
+</html>
