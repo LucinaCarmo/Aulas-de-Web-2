@@ -42,15 +42,16 @@
     </header>
     <main>
         <h2>Entre em contato</h2>
+        <div id="messageBox" style="display: none;"></div>
         <form action="PHP/salvarMensagem.php" method="post">
             <label for="nome">Nome</label>
             <input type="text" name="nome" id="idNome">
             <label for="assunto">Assunto</label>
             <select name="assunto" id="idAssunto">
-                <option value="">Elogio</option>
-                <option value="">Reclamação</option>
-                <option value="">Sugestão</option>
-                <option value="">Dúvida</option>
+                <option value="Elogio">Elogio</option>
+                <option value="Reclamação">Reclamação</option>
+                <option value="Sugestão">Sugestão</option>
+                <option value="Dúvida">Dúvida</option>
             </select>
             <textarea name="mensagem" id="idMensagem" cols="30" rows="10" maxlength="250"></textarea>
             <input type="email" name="email" id="idEmail" placeholder="escreva seu e-mail">
@@ -67,6 +68,23 @@
         </ul>
         <p>Lucina Gonçalves do Carmo</p>
     </footer>
+    <script>
+        window.onload = function() {
+            const urlParams = new URLSearchParams (window.location.search);
+            const status = urlParams.get('status');
+            const messageBox = document.getElementById('messageBox');
+
+            if (status === 'success') {
+                messageBox.style.display = 'block';
+                messageBox.innerHTML = 'Mensagem enviada com sucesso!';
+                messageBox.style.color = 'green';
+            }else if (status ==='error'){
+                messageBox.style.display = 'block';
+                messageBox.innerHTML = 'Houve um erro ao enviar a mensagem.';
+                messageBox.style.color = 'red';
+            }
+        }
+    </script>
 </body>
 
 </html>
