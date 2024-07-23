@@ -1,0 +1,24 @@
+body{
+    background-color: burlywood;
+    color:aliceblue;
+}
+ul {
+    list-style: none;
+    padding: 0;
+}
+ul li {
+    position: relative;
+    padding-left: 40px;
+    margin-bottom: 10px;
+}
+ul li::before{
+    content:'';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    background-image: url('../IMG/apontando-para-cima.png');
+    background-size: cover;
+    transform: translateY(-50%) rotate(90deg);
+}

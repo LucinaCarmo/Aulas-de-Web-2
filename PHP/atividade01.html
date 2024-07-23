@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo Idade</title>
+</head>
+<body>
+    <form action="PHP/idade.php" method="get">
+        <label for="nome">Digite seu nome:</label>
+        <input type="text" name="nome" id="idNome" placeholder="Digite seu nome" maxlength="50" size="20" required><br>
+        <label for="ano">Digite seu ano de nascimento:</label>
+        <input type="number" name="ano" id="idAno" placeholder="Digite seu ano de nascimento"  maxlength="60" size="30" required>
+        <fieldset>
+            <legend>Sexo</legend>
+            <input type="radio" name="sexo" id="idsexo" value="masculino">
+            <label for="sexo">Masculino</label>
+            <input type="radio" name="sexo" id="idsexo" value="feminino">
+            <label for="sexo">Feminino</label>
+        </fieldset>
+        <input type="submit" name="enviar" value="Enviar">
+    </form>
+</body>
+</html>
