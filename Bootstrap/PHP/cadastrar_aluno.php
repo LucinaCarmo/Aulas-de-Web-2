@@ -13,7 +13,7 @@ if(isset($_POST['cadastrar'])){
     if (empty($nome) || empty ($cpf) || empty ($celular) || empty ($email)){
         echo "<script>
         alert('Preencha todos os campos!!!');
-        window.location.href = '../cadAluno.html';
+        window.location.href = '../cadAluno.php';
         </script>";
         exit;
 
@@ -25,7 +25,7 @@ if(isset($_POST['cadastrar'])){
     if($declaracao->num_rows>0){
         echo"<script>
         alert('CPF já cadastrado!!!');
-        window.location.href = '../cadAluno.html';  
+        window.location.href = '../cadAluno.php';  
         </script>";
         $declaracao->close();
     }
@@ -36,16 +36,39 @@ if(isset($_POST['cadastrar'])){
     if ($declaracao->execute()){
         echo"<script>
         alert('Aluno cadastrado com sucesso!');
-        window.location.href = '../cadAluno.html';
+        window.location.href = '../cadAluno.php';
         </script>";
     }else{
         echo "Erro ao cadastrar aluno: ".$declaracao->error;
     }
 }
+if(isset($_POST['buscar'])){
+    $buscar_cpf = $_POST['cpf'];
 
 
+    $stmt = $conexao->prepare("SELECT nome, cpf, celular, whatsapp, email, categoria FROM cadaluno WHERE cpf = ?");
+    $stmt->bind_param("s",$buscar_cpf);
+    $stmt->execute();
+    $stmt->store_result();
 
+    if($stmt->num_rows >0) {
+        $stmt->bind_result($nome, $cpf, $celular,$zap, $email, $categoria);
+        $stmt->fetch();
+        $_SESSION['nome'] = $nome;
+        $_SESSION['cpf'] = $cpf;
+        $_SESSION['celular'] = $celular;
+        $_SESSION['whatsapp'] = $zap;
+        $_SESSION['email'] = $email;
+        $_SESSION['categoria'] = $categoria;
+        header("Location:../cadAluno.php");
 
-
+    }else{
+        echo "<script>('CPF não encontrado.');
+        window.location.href = '../cadAluno.php';
+        </script>";
+    }
+    $stmt->close();
+    $conexao->close();
+}
 
 ?>
