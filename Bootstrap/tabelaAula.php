@@ -74,6 +74,7 @@
                     <th>Instrutor</th>
                     <th>Aluno</th>
                     <th>Veículo</th>
+                    <th>Opção</th>
                 </tr>
             </thead>
             <tbody>
@@ -91,5 +92,6 @@
             </form>
         </div>
     </div>
+   
 </body>
 </html>
