@@ -155,6 +155,7 @@ input, select {
             <input type="text" id="carro" name="carro" value="<?php echo $carro; ?>" required>
             
             <button type="submit" id="idAgendar" name="agendar" class="button">Agendar</button>
+            
         </form>
     </div>
 </body>

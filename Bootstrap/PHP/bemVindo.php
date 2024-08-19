@@ -1,14 +1,14 @@
 
 <?php
 session_start();
-if(isset($_SESSION['nome'])){
+/*if(isset($_SESSION['nome'])){
 $nomeUsuario =$_SESSION['nome'];
 }else{
-     header("location:exercicioLogar.html");
-}
+     header("location:../exercicioLogar.html");
+}*/
 ?>
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,6 +17,9 @@ $nomeUsuario =$_SESSION['nome'];
    
 </head>
 <body>
+    <?php
+    include_once "navegador.php";
+    ?>
     <div class="container">
         <h1>Olá, <?php echo htmlspecialchars($nomeUsuario)?>!</h1>
         <p>Hoje é dia <span id="dataAtual"></span>.</p>
