@@ -1,3 +1,12 @@
+<?php
+session_start();
+if(isset($_SESSION['nome'])){
+$nomeUsuario =$_SESSION['nome'];
+}else{
+     header("location:../exercicioLogar.html");
+}
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -8,6 +17,9 @@
   
 </head>
 <body>
+<?php
+    include_once "location:PHP/navegador.php";
+    ?>
     <style>
         nav a{
         float: left;
@@ -64,10 +76,10 @@
             <a href="PHP/bemVindo.php">Início</a>
             <a href="cadAluno.php">Cadastrar Aluno</a>
             <a href="#">Cadastrar carro</a>
-            <a href="cadastrarAula.php">Cadastrar Aula</a>
+            <a href="../cadastrarAula.php">Cadastrar Aula</a>
             <a href="buscarAula.php">Buscar Aula</a>
-            <a href="#">Contas</a>
-            <a href="#">Sair</a>
+            <a href="../despesas.php">Contas</a>
+            <a href="sair.php">Sair</a>
 
         </div>
     </nav>
