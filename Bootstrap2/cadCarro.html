@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>Cadastrar Veículo - Autoescola</title>
+    
+       
+</head>
+<body>
+   
+    <div class="container">
+        <h1>Cadastrar Veículo</h1>
+        <form action="cadastrar_carro.php" method="post">
+            <label for="marca">Marca:</label>
+            <input type="text" id="marca" name="marca" required>
+            
+            <label for="modelo">Modelo:</label>
+            <input type="text" id="modelo" name="modelo" required>
+            
+            <label for="ano">Ano:</label>
+            <input type="number" id="ano" name="ano" required>
+            
+            <label for="placa">Placa:</label>
+            <input type="text" id="placa" name="placa" required>
+            
+            <label for="cor">Cor:</label>
+            <input type="text" id="cor" name="cor" required>
+            
+            <label for="categoria">Categoria:</label>
+            <select id="categoria" name="categoria">
+                <option value="A">A</option>
+                <option value="B">B</option>
+                <option value="C">C</option>
+                <option value="D">D</option>
+                <option value="E">E</option>
+            </select>
+            
+            <button type="submit" class="button">Cadastrar</button>
+        </form>
+    </div>
+</body>
+</html>

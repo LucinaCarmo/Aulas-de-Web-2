@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+        }
+        .message {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        .success {
+            color: green;
+        }
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Login</h1>
+        <form action="index.php" method="post">
+            <input type="text" name="password" placeholder="Digite sua senha" maxlength="7" required>
+            <br><br>
+            <button type="submit">Entrar</button>
+        </form>
+        <?php
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            $senha = $_POST['password'];
+
+            if (verificarSenha($senha)) {
+                echo '<p class="message success">Login bem-sucedido!</p>';
+            } else {
+                echo '<p class="message error">Senha inválida. A senha deve ter 6 ou 7 dígitos.</p>';
+            }
+        }
+
+        function verificarSenha($senha) {
+            // Verifica se a senha tem 6 ou 7 dígitos e se contém apenas números
+            return preg_match('/^\d{6}$|^\d{7}$/', $senha);
+        }
+        ?>
+    </div>
+</body>
+</html>
